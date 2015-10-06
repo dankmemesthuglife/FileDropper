@@ -12,12 +12,12 @@ using System.Net.Mail;
 
 namespace FileDropper
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
 
@@ -108,6 +108,11 @@ namespace FileDropper
         {
             SmtpServer.Send(mail);
             MessageBox.Show("Mail was successfully sent!");
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
